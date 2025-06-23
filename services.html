@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services | Black Rank</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --gold: #D4AF37;
+      --dark-bg: #0A0A0A;
+      --card-bg: #111111;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark-bg);
+      color: #E5E7EB;
+    }
+
+    .text-gold { color: var(--gold); }
+    .bg-gold { background-color: var(--gold); }
+
+    .service-card {
+      background-color: var(--card-bg);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #333;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(212, 175, 55, 0.1);
+      border-color: var(--gold);
+    }
+
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #1E1E1E;
+      color: var(--gold);
+      transition: all 0.3s ease;
+    }
+    .social-icon:hover {
+      background: var(--gold);
+      color: #000;
+      transform: translateY(-3px);
+    }
+
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--gold);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="bg-black/90 backdrop-blur-sm text-white py-4 shadow-md sticky top-0 z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <a href="index.html" class="focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-black rounded">
+        <img src="images/logo.png" alt="Black Rank" class="h-10"/>
+      </a>
+      <nav class="hidden md:flex items-center space-x-8" aria-label="Main navigation">
+        <a href="index.html" class="nav-link text-white font-medium hover:text-gold">Home</a>
+        <a href="about us.html" class="nav-link text-white font-medium hover:text-gold">About us</a>
+        <a href="sectors.html" class="nav-link text-white font-medium hover:text-gold">Sectors</a>
+        <a href="services.html" class="nav-link text-white font-medium hover:text-gold">Services</a>
+        <a href="contact.html" class="nav-link text-white font-medium hover:text-gold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <section class="bg-gray-900 text-center py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Our Comprehensive Services</h1>
+      <p class="text-gray-300 text-lg">Expert solutions covering all aspects of industrial development and operations</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-20 px-6 md:px-16 lg:px-24">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-white mb-16 text-center section-title">Core Services</h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Power Plant Design & Construction -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-power-off"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Power Plant Design & Construction</h3>
+          <p class="text-gray-400">Complete solutions for thermal, gas, and steam power plants including design, engineering and construction.</p>
+        </div>
+
+        <!-- Renewable Energy Systems -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-solar-panel"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Renewable Energy Systems</h3>
+          <p class="text-gray-400">Solar, wind and hybrid renewable energy solutions for sustainable power generation.</p>
+        </div>
+
+        <!-- Smart Grid Development -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Smart Grid Development & Energy Audits</h3>
+          <p class="text-gray-400">Advanced grid modernization and comprehensive energy efficiency assessments.</p>
+        </div>
+
+        <!-- EPC Turnkey Projects -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-hard-hat"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">EPC Turnkey Project Management</h3>
+          <p class="text-gray-400">End-to-end project delivery from engineering through commissioning.</p>
+        </div>
+
+        <!-- Mechanical Fabrication -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Mechanical Fabrication & Installation</h3>
+          <p class="text-gray-400">Precision fabrication and installation of industrial mechanical systems.</p>
+        </div>
+
+        <!-- Automation Systems -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Automation Systems Integration</h3>
+          <p class="text-gray-400">PLC, SCADA and DCS systems for industrial process automation.</p>
+        </div>
+
+        <!-- IIoT Solutions -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">IIoT Solutions & Industrial Cybersecurity</h3>
+          <p class="text-gray-400">Industrial IoT implementations with robust cybersecurity protections.</p>
+        </div>
+
+        <!-- Smart Mobility -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-car-alt"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Smart Mobility & EV Infrastructure</h3>
+          <p class="text-gray-400">Electric vehicle charging infrastructure and intelligent transportation solutions.</p>
+        </div>
+
+        <!-- Smart City Development -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-city"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Smart City Development</h3>
+          <p class="text-gray-400">Integrated solutions for urban digital transformation and smart infrastructure.</p>
+        </div>
+
+        <!-- Heavy Industries -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-industry"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Heavy Industries Mechanical Works</h3>
+          <p class="text-gray-400">Specialized mechanical solutions for heavy industrial applications.</p>
+        </div>
+
+        <!-- NDT & Inspection -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">NDT, Welding Inspection & Heat Treatment</h3>
+          <p class="text-gray-400">Non-destructive testing and quality assurance services.</p>
+        </div>
+
+        <!-- Thermal Insulation -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-fire-extinguisher"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Thermal & Acoustic Insulation Solutions</h3>
+          <p class="text-gray-400">Advanced insulation systems for thermal and noise control.</p>
+        </div>
+
+        <!-- Industrial Cooling -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-snowflake"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Industrial Cooling Systems</h3>
+          <p class="text-gray-400">Custom cooling solutions for industrial processes and facilities.</p>
+        </div>
+
+        <!-- Security Infrastructure -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Security Infrastructure & Surveillance</h3>
+          <p class="text-gray-400">Comprehensive physical and digital security systems.</p>
+        </div>
+
+        <!-- Water Treatment -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-tint"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Water Treatment & Environmental Solutions</h3>
+          <p class="text-gray-400">Sustainable water management and environmental compliance systems.</p>
+        </div>
+
+        <!-- Oil & Gas EPC -->
+        <div class="service-card rounded-lg p-8">
+          <div class="text-gold text-4xl mb-5">
+            <i class="fas fa-oil-can"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Oil & Gas EPC Services</h3>
+          <p class="text-gray-400">Pipeline construction and full EPC services for oil & gas sector.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 py-16 px-6 md:px-16 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Company Info -->
+      <div>
+        <img src="images/logo.png" alt="Black Rank" class="h-10 mb-6">
+        <p class="mb-6">Delivering comprehensive industrial solutions since 2011.</p>
+      </div>
+
+      <!-- Empty Column -->
+      <div></div>
+
+      <!-- Contact & Social -->
+      <div>
+        <h3 class="text-white text-xl font-semibold mb-6">Contact Information</h3>
+        
+        <div class="space-y-4 mb-8">
+          <p class="flex items-center">
+            <i class="fas fa-map-marker-alt text-gold mr-3"></i>
+            25 Tariq ibn Ziyad st. Mansoura, Cairo
+          </p>
+          <p class="flex items-center">
+            <i class="fas fa-phone-alt text-gold mr-3"></i>
+            +20 100 183 3599
+          </p>
+          <p class="flex items-center">
+            <i class="fas fa-envelope text-gold mr-3"></i>
+            info@blackrank.co
+          </p>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex space-x-4">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-7xl mx-auto pt-12 mt-12 border-t border-gray-800 text-center">
+      <p>&copy; 2011-<span id="current-year"></span> BlackRank. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+

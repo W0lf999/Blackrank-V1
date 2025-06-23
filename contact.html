@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Black Rank</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --gold: #D4AF37;
+      --dark-bg: #0A0A0A;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark-bg);
+      color: #E5E7EB;
+    }
+
+    .text-gold { color: var(--gold); }
+    .bg-gold { background-color: var(--gold); }
+
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-black text-white py-6 shadow-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <a href="index.html"><img src="images/logo.png" alt="Black Rank" class="h-10"/></a>
+       <nav class="hidden md:flex items-center space-x-8" aria-label="Main navigation">
+        <a href="index.html" class="nav-link text-white font-medium focus-visible:text-gold">Home</a>
+        <a href="about us.html" class="nav-link text-white font-medium focus-visible:text-gold">About us</a>
+        <a href="sectors.html" class="nav-link text-white font-medium focus-visible:text-gold">Sectors</a>
+        <a href="services.html" class="nav-link text-white font-medium focus-visible:text-gold">Services</a>
+        <a href="contact.html" class="nav-link text-white font-medium focus-visible:text-gold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <section class="bg-gray-900 text-center py-20">
+    <h1 class="text-4xl font-bold text-white mb-4">Get In Touch</h1>
+    <p class="text-gray-400 max-w-xl mx-auto">We’re here to help. Reach out to us through any of the methods below.</p>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-20 px-6 md:px-16 lg:px-24">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+      <div>
+        <h2 class="text-3xl font-bold mb-6 text-gold">Contact Information</h2>
+        <ul class="space-y-4 text-gray-300">
+          <li><i class="fas fa-map-marker-alt text-gold mr-3"></i>25 Tariq ibn Ziyad st. Mansoura, Cairo</li>
+          <li><i class="fas fa-phone-alt text-gold mr-3"></i>+20 100 183 3599</li>
+          <li><i class="fas fa-envelope text-gold mr-3"></i>info@blackrank.co</li>
+          <li><i class="fas fa-clock text-gold mr-3"></i>Sunday - Thursday: 9:00am - 6:00pm</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold mb-6 text-white">Send Us a Message</h2>
+        <form class="space-y-6">
+          <div>
+            <label class="block mb-2">Name</label>
+            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-gold"/>
+          </div>
+          <div>
+            <label class="block mb-2">Email</label>
+            <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-gold"/>
+          </div>
+          <div>
+            <label class="block mb-2">Message</label>
+            <textarea rows="5" placeholder="Your Message" class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-gold"></textarea>
+          </div>
+          <button type="submit" class="bg-gold text-black font-semibold px-6 py-3 rounded hover:bg-yellow-400 transition">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 py-12 px-6 md:px-16">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <img src="images/logo.png" alt="Logo" class="h-10 mb-4"/>
+        <p>Empowering industries through modern solutions and engineering excellence.</p>
+      </div>
+      <div>
+        <!-- هذا القسم تم تركيه فارغاً للحفاظ على المسافات -->
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-gold text-xl transition-colors duration-300">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gold text-xl transition-colors duration-300">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gold text-xl transition-colors duration-300">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gold text-xl transition-colors duration-300">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gold text-xl transition-colors duration-300">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
