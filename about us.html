@@ -2,49 +2,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Black Rank | Industrial Solutions Leader</title>
-  <meta name="description" content="Pioneering industrial solutions in engineering, automation and digital transformation">
-
-  <!-- Tailwind CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Black Rank</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            gold: '#D4AF37',
-            dark: '#0A0A0A',
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
+    :root {
+      --gold: #D4AF37;
+      --dark-bg: #0A0A0A;
+    }
+
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #0A0A0A;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark-bg);
       color: #E5E7EB;
     }
 
-    .hero-section {
-      background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)),
-                  url('images/hero-bg.jpg') no-repeat center center/cover;
-      min-height: 100vh;
-    }
+    .text-gold { color: var(--gold); }
+    .bg-gold { background-color: var(--gold); }
 
     .nav-link {
       position: relative;
     }
-
     .nav-link::after {
       content: '';
       position: absolute;
@@ -52,211 +33,155 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: #D4AF37;
-      transition: width 0.3s;
+      background: var(--gold);
+      transition: width 0.3s ease;
     }
-
     .nav-link:hover::after {
       width: 100%;
     }
 
-    .sector-card {
-      transition: all 0.3s ease;
-      background: #111111;
-    }
-
-    .sector-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-
     .social-icon {
       transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.3);
     }
-
     .social-icon:hover {
-      transform: translateY(-2px);
-      color: #D4AF37 !important;
+      transform: translateY(-3px);
+      color: var(--gold);
+      border-color: var(--gold);
+      background: rgba(212, 175, 55, 0.1);
     }
   </style>
 </head>
+<body>
 
-<body class="relative">
-  <!-- Navigation -->
-  <header class="fixed w-full bg-black/90 backdrop-blur-sm z-50 border-b border-gray-800">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="flex items-center">
-        <img src="images/logo.png" alt="Black Rank Logo" class="h-10">
-      </a>
-
-      <nav class="hidden md:flex items-center space-x-8">
-        <a href="index.html" class="nav-link text-white font-medium">Home</a>
-        <a href="about.html" class="nav-link text-white font-medium">About us</a>
-        <a href="sectors.html" class="nav-link text-white font-medium">Sectors</a>
-        <a href="services.html" class="nav-link text-white font-medium">Services</a>
-        <a href="contact.html" class="nav-link text-white font-medium">Contact</a>
+  <!-- Header -->
+  <header class="bg-black text-white py-6 shadow-md sticky top-0 z-40 backdrop-blur-sm bg-opacity-90">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <a href="index.html"><img src="images/logo.png" alt="Black Rank" class="h-10"/></a>
+       <nav class="hidden md:flex items-center space-x-8" aria-label="Main navigation">
+        <a href="index.html" class="nav-link text-white font-medium focus-visible:text-gold">Home</a>
+        <a href="about us.html" class="nav-link text-white font-medium focus-visible:text-gold">About us</a>
+        <a href="sectors.html" class="nav-link text-white font-medium focus-visible:text-gold">Sectors</a>
+        <a href="services.html" class="nav-link text-white font-medium focus-visible:text-gold">Services</a>
+        <a href="contact.html" class="nav-link text-white font-medium focus-visible:text-gold">Contact</a>
       </nav>
-
-      <button id="mobile-menu-button" class="md:hidden text-white text-2xl">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden bg-black/95 w-full py-4 px-6">
-      <a href="index.html" class="block py-2 text-white">Home</a>
-      <a href="about.html" class="block py-2 text-white">About</a>
-      <a href="sectors.html" class="block py-2 text-white">Sectors</a>
-      <a href="services.html" class="block py-2 text-white">Services</a>
-      <a href="contact.html" class="block py-2 text-white">Contact</a>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section pt-32 pb-20 px-6">
-    <div class="max-w-7xl mx-auto text-center">
-      <span class="inline-block text-gold font-medium mb-4">Industrial Innovation Leaders</span>
-      <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
-        Redefining <span class="text-gold">Industrial Excellence</span>
-      </h1>
-      <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-10">
-        Advanced industrial solutions for modern businesses across multiple sectors
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="downloads/blackrank-profile.pdf" download
-           class="bg-gold text-black font-bold px-8 py-4 rounded-lg hover:bg-opacity-90 transition">
-          <i class="fas fa-download mr-2"></i> Download Profile
-        </a>
-        <a href="contact.html"
-           class="border border-gold text-white font-bold px-8 py-4 rounded-lg hover:bg-gold hover:text-black transition">
-          <i class="fas fa-envelope mr-2"></i> Contact Us
-        </a>
+  <!-- Page Title -->
+  <section class="bg-gray-900 text-center py-20">
+    <h1 class="text-4xl font-bold text-white mb-4">Get In Touch</h1>
+    <p class="text-gray-400 max-w-xl mx-auto">We're here to help. Reach out to us through any of the methods below.</p>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-20 px-6 md:px-16 lg:px-24">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+      <div>
+        <h2 class="text-3xl font-bold mb-6 text-gold">Contact Information</h2>
+        <ul class="space-y-4 text-gray-300">
+          <li><i class="fas fa-map-marker-alt text-gold mr-3"></i>25 Tariq ibn Ziyad st. Mansoura, Cairo</li>
+          <li><i class="fas fa-phone-alt text-gold mr-3"></i>+20 100 183 3599</li>
+          <li><i class="fas fa-envelope text-gold mr-3"></i>info@blackrank.co</li>
+          <li><i class="fas fa-clock text-gold mr-3"></i>Sunday - Thursday: 9:00am - 6:00pm</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold mb-6 text-white">Send Us a Message</h2>
+        <form class="space-y-6">
+          <div>
+            <label class="block mb-2">Name</label>
+            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-gold"/>
+          </div>
+          <div>
+            <label class="block mb-2">Email</label>
+            <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-gold"/>
+          </div>
+          <div>
+            <label class="block mb-2">Message</label>
+            <textarea rows="5" placeholder="Your Message" class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-gold"></textarea>
+          </div>
+          <button type="submit" class="bg-gold text-black font-semibold px-6 py-3 rounded hover:bg-yellow-400 transition">Send Message</button>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- Sectors Section -->
-  <section class="py-20 bg-gray-900">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gold">Our Sectors</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Manufacturing -->
-        <div class="sector-card p-8 rounded-lg">
-          <div class="text-gold text-3xl mb-4">
-            <i class="fas fa-industry"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Manufacturing</h3>
-          <p class="text-gray-300">Advanced solutions for automation and industrial process optimization</p>
-          <a href="sectors.html#manufacturing" class="text-gold mt-4 inline-block hover:underline">Learn More →</a>
-        </div>
-
-        <!-- Energy -->
-        <div class="sector-card p-8 rounded-lg">
-          <div class="text-gold text-3xl mb-4">
-            <i class="fas fa-bolt"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Energy</h3>
-          <p class="text-gray-300">Innovative systems for power generation and distribution</p>
-          <a href="sectors.html#energy" class="text-gold mt-4 inline-block hover:underline">Learn More →</a>
-        </div>
-
-        <!-- Oil & Gas -->
-        <div class="sector-card p-8 rounded-lg">
-          <div class="text-gold text-3xl mb-4">
-            <i class="fas fa-oil-well"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Oil & Gas</h3>
-          <p class="text-gray-300">Specialized solutions for upstream and downstream operations</p>
-          <a href="sectors.html#oilgas" class="text-gold mt-4 inline-block hover:underline">Learn More →</a>
-        </div>
+  <!-- Footer with Working Social Links -->
+  <footer class="bg-black text-gray-400 py-12 px-6 md:px-16">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <img src="images/logo.png" alt="Black Rank Logo" class="h-10 mb-4"/>
+        <p>Empowering industries through modern solutions and engineering excellence.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-black py-12 border-t border-gray-800">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-8">
-        <div>
-          <h3 class="text-lg font-bold mb-4 text-gold">Contact Us</h3>
-          <address class="not-italic text-gray-400">
-            <p class="flex items-center">
-              <i class="fas fa-map-marker-alt mr-3 text-gold"></i>
-              Cairo, Egypt
-            </p>
-            <p class="mt-3 flex items-center">
-              <i class="fas fa-envelope mr-3 text-gold"></i>
-              <a href="mailto:info@blackrank.com" class="hover:text-gold">info@blackrank.com</a>
-            </p>
-            <p class="mt-3 flex items-center">
-              <i class="fas fa-phone-alt mr-3 text-gold"></i>
-              <a href="tel:+201001833599" class="hover:text-gold">+20 100 183 3599</a>
-            </p>
-          </address>
-
-          <!-- Social Media Icons -->
-          <div class="mt-8">
-            <h4 class="text-sm font-semibold mb-4 text-gray-300 uppercase tracking-wider">Connect With Us</h4>
-            <div class="flex space-x-5">
-              <a href="https://www.facebook.com/BlackRankindustry" target="_blank" rel="noopener noreferrer" class="social-icon text-gray-400 hover:text-gold text-xl" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="https://twitter.com/BlackRankCo" target="_blank" rel="noopener noreferrer" class="social-icon text-gray-400 hover:text-gold text-xl" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="https://www.linkedin.com/company/blackrank/" target="_blank" rel="noopener noreferrer" class="social-icon text-gray-400 hover:text-gold text-xl" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="https://www.instagram.com/blackrank.official" target="_blank" rel="noopener noreferrer" class="social-icon text-gray-400 hover:text-gold text-xl" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="https://www.youtube.com/c/BlackRank" target="_blank" rel="noopener noreferrer" class="social-icon text-gray-400 hover:text-gold text-xl" aria-label="YouTube">
-                <i class="fab fa-youtube"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="md:text-left">
-          <img src="images/logo-white.png" alt="Black Rank Logo" class="h-10 mb-4">
-          <p class="text-gray-400 max-w-md">Leading provider of industrial solutions and technological innovations since 2011, delivering excellence across multiple sectors.</p>
-        </div>
+      <div>
+        <!-- Empty section maintained for spacing -->
       </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+        <div class="flex space-x-6">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/BlackRankindustry"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-icon"
+             aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
 
-      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-        <p>© 2011-<span id="current-year"></span> Black Rank. All Rights Reserved.</p>
+          <!-- Twitter -->
+          <a href="https://twitter.com/BlackRankCo"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-icon"
+             aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/company/blackrank/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-icon"
+             aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/blackrank.official"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-icon"
+             aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/c/BlackRank"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-icon"
+             aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- Optional JavaScript for enhanced functionality -->
   <script>
-    // Mobile menu toggle
-    document.getElementById('mobile-menu-button').addEventListener('click', function() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
-    });
-
-    // Set current year in footer
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-
-    // Check if hero image is loading
-    const heroImg = new Image();
-    heroImg.src = 'images/hero-bg.jpg';
-    heroImg.onload = function() {
-      console.log('Hero image loaded successfully');
-    };
-    heroImg.onerror = function() {
-      console.error('Failed to load hero image - check file path');
-    };
-
-    // Social media hover effects
+    // Social media link tracking (optional)
     document.querySelectorAll('.social-icon').forEach(icon => {
-      icon.addEventListener('mouseenter', function() {
-        this.querySelector('i').style.transform = 'scale(1.2)';
-      });
-      icon.addEventListener('mouseleave', function() {
-        this.querySelector('i').style.transform = 'scale(1)';
+      icon.addEventListener('click', function() {
+        console.log('Social link clicked:', this.getAttribute('aria-label'));
       });
     });
   </script>
