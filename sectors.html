@@ -242,7 +242,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer with Working Social Links -->
   <footer class="bg-black text-gray-400 py-16 px-6 md:px-16 border-t border-gray-800">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
       <!-- Company Info -->
@@ -275,16 +275,39 @@
 
         <!-- Social Icons -->
         <div class="flex space-x-4">
-          <a href="#" class="social-icon" aria-label="Facebook">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/BlackRankOfficial" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="social-icon" 
+             aria-label="Facebook">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="#" class="social-icon" aria-label="Twitter">
+          
+          <!-- Twitter -->
+          <a href="https://twitter.com/BlackRankCo" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="social-icon" 
+             aria-label="Twitter">
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="#" class="social-icon" aria-label="LinkedIn">
+          
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/company/blackrank/" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="social-icon" 
+             aria-label="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="#" class="social-icon" aria-label="Instagram">
+          
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/blackrank.official" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="social-icon" 
+             aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
         </div>
@@ -300,6 +323,13 @@
   <script>
     // Set current year in footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Optional: Social media link tracking
+    document.querySelectorAll('.social-icon').forEach(icon => {
+      icon.addEventListener('click', function() {
+        console.log('Social link clicked:', this.getAttribute('aria-label'));
+      });
+    });
   </script>
 </body>
 </html>
