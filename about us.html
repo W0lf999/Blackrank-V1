@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Black Rank</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --gold: #D4AF37;
+      --dark-bg: #0A0A0A;
+      --card-bg: #111111;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark-bg);
+      color: #E5E7EB;
+      line-height: 1.6;
+    }
+
+    .text-gold { color: var(--gold); }
+    .bg-gold { background-color: var(--gold); }
+    .border-gold { border-color: var(--gold); }
+
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .values-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .values-list li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .values-list li::before {
+      content: "▸";
+      color: var(--gold);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .section-divider {
+      border-top: 1px solid rgba(212, 175, 55, 0.3);
+      margin: 4rem auto;
+      width: 80%;
+    }
+
+    .social-icon {
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    .social-icon:hover {
+      transform: translateY(-5px);
+      color: var(--gold);
+      border-color: var(--gold);
+      background: rgba(212, 175, 55, 0.1);
+    }
+
+    .hero-overlay {
+      background: linear-gradient(to right, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.7));
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-black text-white py-6 shadow-md sticky top-0 z-50 backdrop-blur-sm bg-opacity-90">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <img src="images/logo.png" alt="Black Rank" class="h-10"/>
+        <span class="ml-3 text-xl font-bold text-gold hidden md:block">BLACK RANK</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-8" aria-label="Main navigation">
+        <a href="index.html" class="nav-link text-white font-medium hover:text-gold">Home</a>
+        <a href="about us.html" class="nav-link text-gold font-medium">About us</a>
+        <a href="sectors.html" class="nav-link text-white font-medium hover:text-gold">Sectors</a>
+        <a href="services.html" class="nav-link text-white font-medium hover:text-gold">Services</a>
+        <a href="contact.html" class="nav-link text-white font-medium hover:text-gold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-32 bg-[url('images/about-hero.jpg')] bg-cover bg-center">
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">About <span class="text-gold">Black Rank</span></h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">Pioneering industrial excellence through innovation and sustainable solutions</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-gold font-semibold">OUR STORY</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mt-4 mb-6">Engineering the Future</h2>
+        <div class="max-w-4xl mx-auto">
+          <p class="text-gray-300 text-lg mb-6">
+            Black Rank stands at the forefront of engineering and industrial innovation, delivering world-class EPC, O&M, and smart solutions across the energy, infrastructure, heavy industries, and digital transformation sectors.
+          </p>
+          <p class="text-gray-300 text-lg">
+            Founded in 2011 as Integrated Systems and rebranded in 2025, Black Rank reflects a bold vision to redefine industrial excellence and sustainable growth across the MENA region and global markets. With over 14 years of regional expertise, strong global partnerships, and a commitment to state-of-the-art technologies, Black Rank consistently delivers value-driven, future-proof solutions tailored to meet the evolving demands of the modern world.
+          </p>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- Identity Section -->
+      <div class="text-center mb-20">
+        <div class="inline-block bg-gray-800 px-6 py-3 rounded-full mb-6">
+          <span class="text-gold font-semibold">WE ARE</span>
+        </div>
+        <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">An Engineering Powerhouse</h3>
+        <p class="text-gray-300 text-xl max-w-3xl mx-auto">
+          Driving technological advancement and industrial excellence through innovation and expertise.
+        </p>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- Vision & Mission -->
+      <div class="grid md:grid-cols-2 gap-12 mb-20">
+        <div class="bg-gray-800 p-10 rounded-xl card-hover">
+          <div class="flex items-center mb-6">
+            <div class="bg-gold p-3 rounded-full mr-6">
+              <i class="fas fa-eye text-black text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gold">Our Vision</h3>
+          </div>
+          <p class="text-gray-300 text-lg">To be the driving force behind the smart, sustainable, and technological transformation of the energy and industrial sectors, setting new benchmarks for excellence worldwide.</p>
+        </div>
+
+        <div class="bg-gray-800 p-10 rounded-xl card-hover">
+          <div class="flex items-center mb-6">
+            <div class="bg-gold p-3 rounded-full mr-6">
+              <i class="fas fa-bullseye text-black text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gold">Our Mission</h3>
+          </div>
+          <p class="text-gray-300 text-lg">To provide integrated engineering, construction, and operational solutions that surpass global benchmarks, creating sustainable value for our clients, stakeholders, and communities.</p>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- Values Section -->
+      <div class="mt-20">
+        <div class="text-center mb-16">
+          <span class="text-gold font-semibold">OUR FOUNDATION</span>
+          <h3 class="text-3xl font-bold text-white mt-4 mb-6">Core Values</h3>
+          <p class="text-gray-300 max-w-2xl mx-auto">The principles that guide every decision and action we take</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div class="bg-gray-800 p-8 rounded-lg text-center card-hover">
+            <div class="bg-gold bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-star text-gold text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-3">Excellence</h4>
+            <p class="text-gray-300">We strive for the highest standards in everything we do</p>
+          </div>
+
+          <div class="bg-gray-800 p-8 rounded-lg text-center card-hover">
+            <div class="bg-gold bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-leaf text-gold text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-3">Sustainability</h4>
+            <p class="text-gray-300">We build solutions that last and benefit future generations</p>
+          </div>
+
+          <div class="bg-gray-800 p-8 rounded-lg text-center card-hover">
+            <div class="bg-gold bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-lightbulb text-gold text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-3">Innovation</h4>
+            <p class="text-gray-300">We embrace cutting-edge technologies and creative thinking</p>
+          </div>
+
+          <div class="bg-gray-800 p-8 rounded-lg text-center card-hover">
+            <div class="bg-gold bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-shield-alt text-gold text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-3">Integrity</h4>
+            <p class="text-gray-300">We conduct business with honesty and transparency</p>
+          </div>
+
+          <div class="bg-gray-800 p-8 rounded-lg text-center card-hover">
+            <div class="bg-gold bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-handshake text-gold text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-3">Commitment</h4>
+            <p class="text-gray-300">We are dedicated to our clients' success and our team's growth</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div class="p-6">
+          <div class="text-4xl font-bold text-gold mb-2">14+</div>
+          <div class="text-gray-300">Years Experience</div>
+        </div>
+        <div class="p-6">
+          <div class="text-4xl font-bold text-gold mb-2">150+</div>
+          <div class="text-gray-300">Projects Completed</div>
+        </div>
+        <div class="p-6">
+          <div class="text-4xl font-bold text-gold mb-2">40+</div>
+          <div class="text-gray-300">Global Partners</div>
+        </div>
+        <div class="p-6">
+          <div class="text-4xl font-bold text-gold mb-2">5</div>
+          <div class="text-gray-300">Continents Served</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- JavaScript for enhanced functionality -->
+  <script>
+    // Mobile menu toggle functionality would go here
+    // Social media link confirmation (optional)
+    document.querySelectorAll('.social-icon').forEach(icon => {
+      icon.addEventListener('click', function(e) {
+        console.log('Opening:', this.href);
+        // Optional: Add confirmation dialog
+        // if(!confirm(Open ${this.getAttribute('aria-label')}?)) {
+        //   e.preventDefault();
+        // }
+      });
+    });
+
+    // Set current year in footer
+    document.querySelector('footer p').innerHTML = &copy; ${new Date().getFullYear()} Black Rank. All Rights Reserved.;
+  </script>
+</body>
+</html>
+
+
